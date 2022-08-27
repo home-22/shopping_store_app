@@ -17,7 +17,10 @@ class LoginPage extends StatelessWidget {
             children: [
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 0),
-                child: Image.asset('images/welcome.jpg'),
+                child: Image.asset(
+                  'images/welcome.jpg',
+                  height: 250,
+                ),
               ),
               Container(
                 margin:
@@ -89,6 +92,73 @@ class LoginPage extends StatelessWidget {
                   ],
                 ),
               ),
+              Container(
+                margin: EdgeInsets.only(left: 15),
+                alignment: Alignment.centerLeft,
+                child: TextButton(
+                  onPressed: () {},
+                  child: Text(
+                    'Forget Password',
+                    style: TextStyle(
+                        color: Colors.grey,
+                        fontSize: 16,
+                        fontWeight: FontWeight.w500),
+                  ),
+                ),
+              ),
+              SizedBox(height: 20), //40
+              InkWell(
+                onTap: () {
+                  Navigator.pushNamed(context, 'HomePage');
+                },
+                child: Container(
+                  alignment: Alignment.center,
+                  margin: EdgeInsets.symmetric(horizontal: 8),
+                  padding: EdgeInsets.symmetric(horizontal: 15),
+                  height: 55,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    color: Colors.grey,
+                    borderRadius: BorderRadius.circular(20),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.amber.withOpacity(0.5),
+                        blurRadius: 5,
+                        spreadRadius: 1,
+                      ),
+                    ],
+                  ),
+                  child: Text(
+                    'Sign In',
+                    style: TextStyle(
+                      fontSize: 25,
+                      fontWeight: FontWeight.w500,
+                      color: Colors.white,
+                      letterSpacing: 1,
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(height: 50), //50
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    'Don t Have Account? -',
+                    style: TextStyle(
+                      color: Colors.grey.withOpacity(0.7),
+                      fontSize: 16,
+                    ),
+                  ),
+                  TextButton(
+                      onPressed: () {},
+                      child: Text(
+                        'Sign Up',
+                        style: TextStyle(
+                            fontSize: 18, fontWeight: FontWeight.w500),
+                      ))
+                ],
+              )
             ],
           ),
         ),
