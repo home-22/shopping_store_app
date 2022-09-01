@@ -5,6 +5,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:shopping_store_app/widget/Row_Items.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -41,34 +42,71 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                   Container(
-                      padding: const EdgeInsets.all(10),
-                      decoration: BoxDecoration(
-                        color: Colors.amber,
-                        borderRadius: BorderRadius.circular(20),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.redAccent.withOpacity(0.5),
-                            blurRadius: 5,
-                            spreadRadius: 1,
-                          ),
-                        ],
+                    padding: const EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                      color: Colors.amber,
+                      borderRadius: BorderRadius.circular(20),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.redAccent.withOpacity(0.5),
+                          blurRadius: 5,
+                          spreadRadius: 1,
+                        ),
+                      ],
+                    ),
+                    child: Badge(
+                      badgeColor: Colors.red,
+                      padding: const EdgeInsets.all(6),
+                      badgeContent: const Text(
+                        '4',
+                        style: TextStyle(color: Colors.white),
                       ),
-                      child: Badge(
-                        badgeColor: Colors.red,
-                        padding: EdgeInsets.all(6),
-                        badgeContent: Text(
-                          '4',
-                          style: TextStyle(color: Colors.white),
-                        ),
-                        child: Icon(
-                          Icons.notifications,
-                          size: 30,
-                          color: Colors.black,
-                        ),
-                      )),
+                      child: const Icon(
+                        Icons.notifications,
+                        size: 30,
+                        color: Colors.black,
+                      ),
+                    ),
+                  ),
                 ],
               ),
-            )
+            ),
+            Container(
+              margin: EdgeInsets.symmetric(horizontal: 15),
+              padding: EdgeInsets.symmetric(horizontal: 15),
+              height: 55,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(10),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.green.withOpacity(0.5),
+                    blurRadius: 5,
+                    spreadRadius: 1,
+                  ),
+                ],
+              ),
+              child: Row(
+                children: [
+                  Container(
+                    width: 300,
+                    child: TextFormField(
+                      decoration: InputDecoration(
+                        border: InputBorder.none,
+                        hintText: 'Search',
+                      ),
+                    ),
+                  ),
+                  Spacer(),
+                  Icon(
+                    Icons.search,
+                    size: 26,
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(height: 30),
+            RowItems(),
           ],
         ),
       )),

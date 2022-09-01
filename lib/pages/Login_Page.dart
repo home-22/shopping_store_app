@@ -1,9 +1,4 @@
-import 'dart:ffi';
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -48,7 +43,7 @@ class LoginPage extends StatelessWidget {
                     Container(
                       width: 250,
                       child: TextFormField(
-                        decoration: InputDecoration(
+                        decoration: const InputDecoration(
                           border: InputBorder.none,
                           helperText: 'Enter Username',
                         ),
@@ -83,7 +78,7 @@ class LoginPage extends StatelessWidget {
                     Container(
                       width: 250,
                       child: TextFormField(
-                        decoration: InputDecoration(
+                        decoration: const InputDecoration(
                           border: InputBorder.none,
                           helperText: 'Enter Username',
                         ),
@@ -93,11 +88,11 @@ class LoginPage extends StatelessWidget {
                 ),
               ),
               Container(
-                margin: EdgeInsets.only(left: 15),
+                margin: const EdgeInsets.only(left: 15),
                 alignment: Alignment.centerLeft,
                 child: TextButton(
                   onPressed: () {},
-                  child: Text(
+                  child: const Text(
                     'Forget Password',
                     style: TextStyle(
                         color: Colors.grey,
@@ -106,15 +101,15 @@ class LoginPage extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 20), //40
+              const SizedBox(height: 20), //40
               InkWell(
                 onTap: () {
                   Navigator.pushNamed(context, 'HomePage');
                 },
                 child: Container(
                   alignment: Alignment.center,
-                  margin: EdgeInsets.symmetric(horizontal: 8),
-                  padding: EdgeInsets.symmetric(horizontal: 15),
+                  margin: const EdgeInsets.symmetric(horizontal: 8),
+                  padding: const EdgeInsets.symmetric(horizontal: 15),
                   height: 55,
                   width: double.infinity,
                   decoration: BoxDecoration(
@@ -128,7 +123,7 @@ class LoginPage extends StatelessWidget {
                       ),
                     ],
                   ),
-                  child: Text(
+                  child: const Text(
                     'Sign In',
                     style: TextStyle(
                       fontSize: 25,
@@ -139,26 +134,6 @@ class LoginPage extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 50), //50
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    'Don t Have Account? -',
-                    style: TextStyle(
-                      color: Colors.grey.withOpacity(0.7),
-                      fontSize: 16,
-                    ),
-                  ),
-                  TextButton(
-                      onPressed: () {},
-                      child: Text(
-                        'Sign Up',
-                        style: TextStyle(
-                            fontSize: 18, fontWeight: FontWeight.w500),
-                      ))
-                ],
-              )
             ],
           ),
         ),
