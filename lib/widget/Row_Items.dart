@@ -1,3 +1,6 @@
+
+
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class RowItems extends StatelessWidget {
@@ -9,66 +12,93 @@ class RowItems extends StatelessWidget {
       scrollDirection: Axis.horizontal,
       child: Row(
         children: [
-          Container(
-            margin: EdgeInsets.only(top: 10, bottom: 10, left: 15),
-            padding: EdgeInsets.symmetric(horizontal: 10),
-            height: 100,
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(10),
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.blue.withOpacity(0.5),
-                  blurRadius: 5,
-                  spreadRadius: 1,
-                ),
-              ],
-            ),
-            child: Row(
-              children: [
-                Stack(
-                  alignment: Alignment.center,
-                  children: [
-                    Container(
-                      height: 120,
-                      width: 130,
-                      decoration: BoxDecoration(
-                        color: Colors.blueGrey, // okvir
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                    ),
-                    Image.asset(
-                      'images/welcome.jpg',
-                      height: 150,
-                      width: 150,
-                      fit: BoxFit.contain,
-                    ),
-                  ],
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 30),
-                  child: Column(
+          for (int i = 1; i < 5; i++)
+            Container(
+              margin: const EdgeInsets.only(top: 10, bottom: 10, left: 10),
+              padding: const EdgeInsets.symmetric(horizontal: 10),
+              height: 180,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(10),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.blue.withOpacity(0.5),
+                    blurRadius: 5,
+                    spreadRadius: 1,
+                  ),
+                ],
+              ),
+              child: Row(
+                children: [
+                  Stack(
+                    alignment: Alignment.center,
                     children: [
-                      Text(
-                        'Nike Shoe',
-                        style: TextStyle(
-                          fontSize: 23,
-                          fontWeight: FontWeight.w500,
+                      Container(
+                        margin: const EdgeInsets.only(top: 20, right: 70),
+                        height: 120,
+                        width: 110,
+                        decoration: BoxDecoration(
+                          color: const Color(0xFF2D5D70),
+                          borderRadius: BorderRadius.circular(10),
                         ),
                       ),
-                      SizedBox(height: 5),
-                      Text(
-                        "Men's Shoes ",
-                        style: TextStyle(
-                          fontSize: 16,
-                        ),
-                      )
+                      Image.asset(
+                        'images/$i.png',
+                        height: 150,
+                        width: 150,
+                        fit: BoxFit.contain,
+                      ),
                     ],
                   ),
-                ),
-              ],
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 30),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Text(
+                          'Nike Shoe',
+                          style: TextStyle(
+                            fontSize: 23,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                        const SizedBox(height: 5),
+                        Text(
+                          "Men's Shoes ",
+                          style: TextStyle(fontSize: 16, color: Colors.grey),
+                        ),
+                        const Spacer(),
+                        Row(
+                          children: [
+                            Text(
+                              '\$50',
+                              style: TextStyle(
+                                  color: Colors.red,
+                                  fontSize: 22,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            SizedBox(
+                              width: 50,
+                            ),
+                            Container(
+                              padding: EdgeInsets.all(10),
+                              decoration: BoxDecoration(
+                                color: Color(0xFF2D5D70),
+                                borderRadius: BorderRadius.circular(10),
+                              ),
+                              child: Icon(
+                                CupertinoIcons.cart,
+                                color: Colors.white,
+                              ),
+                            )
+                          ],
+                        )
+                      ],
+                    ),
+                  ),
+                ],
+              ),
             ),
-          ),
         ],
       ),
     );

@@ -1,10 +1,5 @@
-import 'dart:ffi';
-
 import 'package:badges/badges.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:shopping_store_app/widget/Row_Items.dart';
 
 class HomePage extends StatelessWidget {
@@ -25,7 +20,7 @@ class HomePage extends StatelessWidget {
                   Container(
                     padding: const EdgeInsets.all(10),
                     decoration: BoxDecoration(
-                      color: Colors.amber,
+                      color: Colors.blueGrey[300],
                       borderRadius: BorderRadius.circular(20),
                       boxShadow: [
                         BoxShadow(
@@ -38,13 +33,13 @@ class HomePage extends StatelessWidget {
                     child: const Icon(
                       Icons.sort,
                       size: 30,
-                      color: Colors.black,
+                      color: Colors.white,
                     ),
                   ),
                   Container(
                     padding: const EdgeInsets.all(10),
                     decoration: BoxDecoration(
-                      color: Colors.amber,
+                      color: Colors.blueGrey[300],
                       borderRadius: BorderRadius.circular(20),
                       boxShadow: [
                         BoxShadow(
@@ -64,7 +59,7 @@ class HomePage extends StatelessWidget {
                       child: const Icon(
                         Icons.notifications,
                         size: 30,
-                        color: Colors.black,
+                        color: Colors.white,
                       ),
                     ),
                   ),
@@ -72,8 +67,8 @@ class HomePage extends StatelessWidget {
               ),
             ),
             Container(
-              margin: EdgeInsets.symmetric(horizontal: 15),
-              padding: EdgeInsets.symmetric(horizontal: 15),
+              margin: const EdgeInsets.symmetric(horizontal: 15),
+              padding: const EdgeInsets.symmetric(horizontal: 15),
               height: 55,
               decoration: BoxDecoration(
                 color: Colors.white,
@@ -88,24 +83,24 @@ class HomePage extends StatelessWidget {
               ),
               child: Row(
                 children: [
-                  Container(
+                  SizedBox(
                     width: 300,
                     child: TextFormField(
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         border: InputBorder.none,
                         hintText: 'Search',
                       ),
                     ),
                   ),
-                  Spacer(),
-                  Icon(
+                  const Spacer(),
+                  const Icon(
                     Icons.search,
                     size: 26,
                   ),
                 ],
               ),
             ),
-            SizedBox(height: 30),
+            const SizedBox(height: 30),
             RowItems(),
           ],
         ),

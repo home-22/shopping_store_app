@@ -11,9 +11,9 @@ class LoginPage extends StatelessWidget {
           child: Column(
             children: [
               Padding(
-                padding: const EdgeInsets.symmetric(vertical: 0),
+                padding: const EdgeInsets.symmetric(vertical: 20),
                 child: Image.asset(
-                  'images/welcome.jpg',
+                  'images/2.png',
                   height: 250,
                 ),
               ),
@@ -33,22 +33,14 @@ class LoginPage extends StatelessWidget {
                   ],
                 ),
                 child: Row(
-                  children: [
-                    const Icon(
+                  children: const [
+                    Icon(
                       Icons.person,
                       size: 27,
                       color: Colors.blueGrey,
                     ),
-                    const SizedBox(width: 20),
-                    Container(
-                      width: 250,
-                      child: TextFormField(
-                        decoration: const InputDecoration(
-                          border: InputBorder.none,
-                          helperText: 'Enter Username',
-                        ),
-                      ),
-                    ),
+                    SizedBox(width: 10),
+                    Text('Enter Username')
                   ],
                 ),
               ),
@@ -68,22 +60,14 @@ class LoginPage extends StatelessWidget {
                   ],
                 ),
                 child: Row(
-                  children: [
-                    const Icon(
+                  children: const [
+                    Icon(
                       Icons.lock,
                       size: 27,
                       color: Colors.blueGrey,
                     ),
-                    const SizedBox(width: 20),
-                    Container(
-                      width: 250,
-                      child: TextFormField(
-                        decoration: const InputDecoration(
-                          border: InputBorder.none,
-                          helperText: 'Enter Username',
-                        ),
-                      ),
-                    ),
+                    SizedBox(width: 10),
+                    Text('Enter Password ')
                   ],
                 ),
               ),
@@ -92,10 +76,10 @@ class LoginPage extends StatelessWidget {
                 alignment: Alignment.centerLeft,
                 child: TextButton(
                   onPressed: () {},
-                  child: const Text(
+                  child: Text(
                     'Forget Password',
                     style: TextStyle(
-                        color: Colors.grey,
+                        color: const Color(0xFF475269).withOpacity(0.5),
                         fontSize: 16,
                         fontWeight: FontWeight.w500),
                   ),
@@ -113,11 +97,11 @@ class LoginPage extends StatelessWidget {
                   height: 55,
                   width: double.infinity,
                   decoration: BoxDecoration(
-                    color: Colors.grey,
+                    color: Color(0xFFD2FFF4).withOpacity(0.6),
                     borderRadius: BorderRadius.circular(20),
                     boxShadow: [
                       BoxShadow(
-                        color: Colors.amber.withOpacity(0.5),
+                        color: const Color(0xFF475269).withOpacity(0.5),
                         blurRadius: 5,
                         spreadRadius: 1,
                       ),
