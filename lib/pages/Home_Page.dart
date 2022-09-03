@@ -1,5 +1,6 @@
 import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
+import 'package:shopping_store_app/widget/All_Items.dart';
 import 'package:shopping_store_app/widget/Row_Items.dart';
 
 class HomePage extends StatelessWidget {
@@ -102,6 +103,7 @@ class HomePage extends StatelessWidget {
             ),
             const SizedBox(height: 30),
             RowItems(),
+            AllItems()
           ],
         ),
       )),
