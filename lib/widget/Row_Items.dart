@@ -63,30 +63,30 @@ class RowItems extends StatelessWidget {
                           ),
                         ),
                         const SizedBox(height: 5),
-                        Text(
+                        const Text(
                           "Men's Shoes ",
                           style: TextStyle(fontSize: 16, color: Colors.grey),
                         ),
                         const Spacer(),
                         Row(
                           children: [
-                            Text(
+                            const Text(
                               '\$50',
                               style: TextStyle(
                                   color: Colors.red,
                                   fontSize: 22,
                                   fontWeight: FontWeight.bold),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 50,
                             ),
                             Container(
-                              padding: EdgeInsets.all(10),
+                              padding: const EdgeInsets.all(10),
                               decoration: BoxDecoration(
-                                color: Color(0xFF2D5D70),
+                                color: const Color(0xFF2D5D70),
                                 borderRadius: BorderRadius.circular(10),
                               ),
-                              child: Icon(
+                              child: const Icon(
                                 CupertinoIcons.cart,
                                 color: Colors.white,
                               ),

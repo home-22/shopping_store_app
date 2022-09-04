@@ -25,7 +25,7 @@ class HomePage extends StatelessWidget {
                       borderRadius: BorderRadius.circular(20),
                       boxShadow: [
                         BoxShadow(
-                          color: Colors.redAccent.withOpacity(0.5),
+                          color: const Color(0xFF475269).withOpacity(0.7),
                           blurRadius: 5,
                           spreadRadius: 1,
                         ),
@@ -44,7 +44,7 @@ class HomePage extends StatelessWidget {
                       borderRadius: BorderRadius.circular(20),
                       boxShadow: [
                         BoxShadow(
-                          color: Colors.redAccent.withOpacity(0.5),
+                          color: const Color(0xFF475269).withOpacity(0.7),
                           blurRadius: 5,
                           spreadRadius: 1,
                         ),
@@ -74,9 +74,9 @@ class HomePage extends StatelessWidget {
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(10),
-                boxShadow: [
+                boxShadow: const [
                   BoxShadow(
-                    color: Colors.green.withOpacity(0.5),
+                    color: Color(0xFF475269),
                     blurRadius: 5,
                     spreadRadius: 1,
                   ),
@@ -102,8 +102,8 @@ class HomePage extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 30),
-            RowItems(),
-            AllItems()
+            const RowItems(),
+            const AllItems()
           ],
         ),
       )),

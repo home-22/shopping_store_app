@@ -97,7 +97,7 @@ class LoginPage extends StatelessWidget {
                   height: 55,
                   width: double.infinity,
                   decoration: BoxDecoration(
-                    color: Color(0xFFD2FFF4).withOpacity(0.6),
+                    color: const Color(0xFF475269),
                     borderRadius: BorderRadius.circular(20),
                     boxShadow: [
                       BoxShadow(
