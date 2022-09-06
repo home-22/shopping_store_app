@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
 class ItemPage extends StatelessWidget {
   const ItemPage({Key? key}) : super(key: key);
@@ -88,7 +89,7 @@ class ItemPage extends StatelessWidget {
               Container(
                 height: MediaQuery.of(context).size.height * 0.35,
                 width: double.infinity,
-                padding: EdgeInsets.symmetric(vertical: 30, horizontal: 20),
+                padding: EdgeInsets.symmetric(vertical: 20, horizontal: 20),
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.only(
@@ -106,7 +107,80 @@ class ItemPage extends StatelessWidget {
                 child: Column(
                   children: [
                     Row(
-                      children: [Text('New Nike')],
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'New Nike Shoe',
+                          style: TextStyle(
+                              fontSize: 28,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.grey),
+                        ),
+                        Text(
+                          '\$55',
+                          style: TextStyle(
+                              fontSize: 25,
+                              fontWeight: FontWeight.w500,
+                              color: Colors.redAccent),
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: 15),
+                    Container(
+                      alignment: Alignment.centerLeft,
+                      child: RatingBar.builder(
+                        initialRating: 4,
+                        maxRating: 1,
+                        direction: Axis.horizontal,
+                        itemSize: 20,
+                        itemCount: 5,
+                        itemPadding: EdgeInsets.symmetric(horizontal: 4),
+                        itemBuilder: (context, index) => Icon(
+                          Icons.favorite,
+                          color: Colors.redAccent,
+                        ),
+                        onRatingUpdate: (index) {},
+                      ),
+                    ),
+                    SizedBox(height: 10),
+                    Text(
+                      'Let your attitude have the edge in the Nike Air Max Plus, a Tuned Air experience that offers stability and cushioning.',
+                      style: TextStyle(color: Colors.grey, fontSize: 17),
+                      textAlign: TextAlign.justify,
+                    ),
+                    SizedBox(height: 10),
+                    Row(
+                      children: [
+                        Text(
+                          'Size',
+                          style: TextStyle(
+                              fontSize: 20,
+                              color: Colors.grey,
+                              fontWeight: FontWeight.w500),
+                        ),
+                        Row(
+                          children: [
+                            for (int i = 5; i < 10; i++)
+                              Container(
+                                height: 35,
+                                width: 35,
+                                alignment: Alignment.center,
+                                margin: EdgeInsets.symmetric(horizontal: 5),
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(10),
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: Colors.amber.withOpacity(0.3),
+                                      blurRadius: 5,
+                                      spreadRadius: 1,
+                                    ),
+                                  ],
+                                ),
+                              )
+                          ],
+                        )
+                      ],
                     )
                   ],
                 ),
