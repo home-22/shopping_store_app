@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
+import 'package:shopping_store_app/widget/BottomNavBar.dart';
 
 class ItemPage extends StatelessWidget {
   const ItemPage({Key? key}) : super(key: key);
@@ -171,17 +172,23 @@ class ItemPage extends StatelessWidget {
                                   borderRadius: BorderRadius.circular(10),
                                   boxShadow: [
                                     BoxShadow(
-                                      color: Colors.amber.withOpacity(0.3),
+                                      color: Colors.red.withOpacity(0.3),
                                       blurRadius: 5,
                                       spreadRadius: 1,
                                     ),
                                   ],
                                 ),
-                              )
+                                child: Text(
+                                  i.toString(),
+                                  style: TextStyle(
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.w500),
+                                ),
+                              ),
                           ],
                         )
                       ],
-                    )
+                    ),
                   ],
                 ),
               ),
@@ -189,6 +196,7 @@ class ItemPage extends StatelessWidget {
           ),
         ),
       ),
+      bottomNavigationBar: BottomNavBar(),
     );
   }
 }
