@@ -43,7 +43,7 @@ class AllItems extends StatelessWidget {
                   padding: const EdgeInsets.only(bottom: 8),
                   child: Container(
                     alignment: Alignment.centerLeft,
-                    child: Text(
+                    child: const Text(
                       'Nike Shoe',
                       style: TextStyle(
                           fontSize: 20,
@@ -63,24 +63,24 @@ class AllItems extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.symmetric(vertical: 10),
+                  padding: const EdgeInsets.symmetric(vertical: 10),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(
+                      const Text(
                         '\$55',
                         style: TextStyle(
                             fontSize: 25,
                             fontWeight: FontWeight.bold,
-                            color: Colors.red),
+                            color: Colors.redAccent),
                       ),
                       Container(
-                        padding: EdgeInsets.all(5),
+                        padding: const EdgeInsets.all(5),
                         decoration: BoxDecoration(
-                          color: Color(0xFF2D5D70),
+                          color: Colors.blue,
                           borderRadius: BorderRadius.circular(10),
                         ),
-                        child: Icon(
+                        child: const Icon(
                           CupertinoIcons.cart_fill_badge_plus,
                           color: Colors.white,
                           size: 28,

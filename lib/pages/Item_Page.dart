@@ -34,7 +34,7 @@ class ItemPage extends StatelessWidget {
                             ),
                           ],
                         ),
-                        child: Icon(
+                        child: const Icon(
                           Icons.arrow_back,
                           size: 30,
                           color: Colors.grey,
@@ -42,7 +42,7 @@ class ItemPage extends StatelessWidget {
                       ),
                     ),
                     Container(
-                      padding: EdgeInsets.all(8),
+                      padding: const EdgeInsets.all(8),
                       decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(10),
@@ -54,7 +54,7 @@ class ItemPage extends StatelessWidget {
                           ),
                         ],
                       ),
-                      child: Icon(
+                      child: const Icon(
                         Icons.favorite,
                         size: 30,
                         color: Colors.redAccent,
@@ -63,8 +63,8 @@ class ItemPage extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(height: 15),
-              Container(
+              const SizedBox(height: 15),
+              SizedBox(
                 height: MediaQuery.of(context).size.height * 0.43,
                 child: Stack(
                   alignment: Alignment.center,
@@ -72,9 +72,9 @@ class ItemPage extends StatelessWidget {
                     Container(
                       height: 230,
                       width: 230,
-                      margin: EdgeInsets.only(top: 20, right: 70),
+                      margin: const EdgeInsets.only(top: 20, right: 70),
                       decoration: BoxDecoration(
-                        color: Color(0xFF2D5D70),
+                        color: Colors.blue,
                         borderRadius: BorderRadius.circular(10),
                       ),
                     ),
@@ -90,16 +90,17 @@ class ItemPage extends StatelessWidget {
               Container(
                 height: MediaQuery.of(context).size.height * 0.35,
                 width: double.infinity,
-                padding: EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+                padding:
+                    const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
                 decoration: BoxDecoration(
                   color: Colors.white,
-                  borderRadius: BorderRadius.only(
+                  borderRadius: const BorderRadius.only(
                     topLeft: Radius.circular(30),
                     topRight: Radius.circular(30),
                   ),
                   boxShadow: [
                     BoxShadow(
-                      color: Color(0xFF2D5D70).withOpacity(0.4),
+                      color: Colors.blue.withOpacity(0.4),
                       blurRadius: 5,
                       spreadRadius: 1,
                     ),
@@ -109,7 +110,7 @@ class ItemPage extends StatelessWidget {
                   children: [
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
+                      children: const [
                         Text(
                           'New Nike Shoe',
                           style: TextStyle(
@@ -126,7 +127,7 @@ class ItemPage extends StatelessWidget {
                         ),
                       ],
                     ),
-                    SizedBox(height: 15),
+                    const SizedBox(height: 15),
                     Container(
                       alignment: Alignment.centerLeft,
                       child: RatingBar.builder(
@@ -135,24 +136,24 @@ class ItemPage extends StatelessWidget {
                         direction: Axis.horizontal,
                         itemSize: 20,
                         itemCount: 5,
-                        itemPadding: EdgeInsets.symmetric(horizontal: 4),
-                        itemBuilder: (context, index) => Icon(
+                        itemPadding: const EdgeInsets.symmetric(horizontal: 4),
+                        itemBuilder: (context, index) => const Icon(
                           Icons.favorite,
                           color: Colors.redAccent,
                         ),
                         onRatingUpdate: (index) {},
                       ),
                     ),
-                    SizedBox(height: 10),
-                    Text(
+                    const SizedBox(height: 10),
+                    const Text(
                       'Let your attitude have the edge in the Nike Air Max Plus, a Tuned Air experience that offers stability and cushioning.',
                       style: TextStyle(color: Colors.grey, fontSize: 17),
                       textAlign: TextAlign.justify,
                     ),
-                    SizedBox(height: 10),
+                    const SizedBox(height: 10),
                     Row(
                       children: [
-                        Text(
+                        const Text(
                           'Size',
                           style: TextStyle(
                               fontSize: 20,
@@ -166,13 +167,14 @@ class ItemPage extends StatelessWidget {
                                 height: 35,
                                 width: 35,
                                 alignment: Alignment.center,
-                                margin: EdgeInsets.symmetric(horizontal: 5),
+                                margin:
+                                    const EdgeInsets.symmetric(horizontal: 5),
                                 decoration: BoxDecoration(
                                   color: Colors.white,
                                   borderRadius: BorderRadius.circular(10),
                                   boxShadow: [
                                     BoxShadow(
-                                      color: Colors.red.withOpacity(0.3),
+                                      color: Colors.redAccent.withOpacity(0.3),
                                       blurRadius: 5,
                                       spreadRadius: 1,
                                     ),
@@ -180,7 +182,7 @@ class ItemPage extends StatelessWidget {
                                 ),
                                 child: Text(
                                   i.toString(),
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                       fontSize: 18,
                                       fontWeight: FontWeight.w500),
                                 ),
@@ -196,7 +198,7 @@ class ItemPage extends StatelessWidget {
           ),
         ),
       ),
-      bottomNavigationBar: BottomNavBar(),
+      bottomNavigationBar: const BottomNavBar(),
     );
   }
 }

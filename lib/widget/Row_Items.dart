@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -38,7 +36,7 @@ class RowItems extends StatelessWidget {
                         height: 120,
                         width: 110,
                         decoration: BoxDecoration(
-                          color: const Color(0xFF2D5D70),
+                          color: Colors.blue,
                           borderRadius: BorderRadius.circular(10),
                         ),
                       ),
@@ -73,7 +71,7 @@ class RowItems extends StatelessWidget {
                             const Text(
                               '\$50',
                               style: TextStyle(
-                                  color: Colors.red,
+                                  color: Colors.redAccent,
                                   fontSize: 22,
                                   fontWeight: FontWeight.bold),
                             ),
@@ -83,7 +81,7 @@ class RowItems extends StatelessWidget {
                             Container(
                               padding: const EdgeInsets.all(10),
                               decoration: BoxDecoration(
-                                color: const Color(0xFF2D5D70),
+                                color: Colors.blue,
                                 borderRadius: BorderRadius.circular(10),
                               ),
                               child: const Icon(
