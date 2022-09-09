@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -8,7 +10,7 @@ class AllItems extends StatelessWidget {
   Widget build(BuildContext context) {
     return GridView.count(
       crossAxisCount: 2,
-      childAspectRatio: 0.56,
+      childAspectRatio: 0.54,
       physics: const NeverScrollableScrollPhysics(),
       shrinkWrap: true,
       children: [
@@ -34,7 +36,7 @@ class AllItems extends StatelessWidget {
                     Navigator.pushNamed(context, 'ItemPage');
                   },
                   child: Padding(
-                    padding: const EdgeInsets.all(10),
+                    padding: const EdgeInsets.all(5),
                     child:
                         Image.asset('images/$i.png', width: 130, height: 130),
                   ),
@@ -85,13 +87,13 @@ class AllItems extends StatelessWidget {
                           color: Colors.white,
                           size: 28,
                         ),
-                      )
+                      ),
                     ],
                   ),
                 ),
               ],
             ),
-          )
+          ),
       ],
     );
   }

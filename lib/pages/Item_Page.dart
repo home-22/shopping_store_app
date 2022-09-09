@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:shopping_store_app/widget/BottomNavBar.dart';
@@ -63,15 +65,15 @@ class ItemPage extends StatelessWidget {
                   ],
                 ),
               ),
-              const SizedBox(height: 15),
+              const SizedBox(height: 10),
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.43,
                 child: Stack(
                   alignment: Alignment.center,
                   children: [
                     Container(
-                      height: 230,
-                      width: 230,
+                      height: 220,
+                      width: 220,
                       margin: const EdgeInsets.only(top: 20, right: 70),
                       decoration: BoxDecoration(
                         color: Colors.blue,
@@ -88,7 +90,7 @@ class ItemPage extends StatelessWidget {
                 ),
               ),
               Container(
-                height: MediaQuery.of(context).size.height * 0.35,
+                height: MediaQuery.of(context).size.height * 0.37,
                 width: double.infinity,
                 padding:
                     const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
@@ -127,7 +129,7 @@ class ItemPage extends StatelessWidget {
                         ),
                       ],
                     ),
-                    const SizedBox(height: 15),
+                    const SizedBox(height: 10),
                     Container(
                       alignment: Alignment.centerLeft,
                       child: RatingBar.builder(
@@ -174,7 +176,7 @@ class ItemPage extends StatelessWidget {
                                   borderRadius: BorderRadius.circular(10),
                                   boxShadow: [
                                     BoxShadow(
-                                      color: Colors.redAccent.withOpacity(0.3),
+                                      color: Colors.grey.withOpacity(0.3),
                                       blurRadius: 5,
                                       spreadRadius: 1,
                                     ),

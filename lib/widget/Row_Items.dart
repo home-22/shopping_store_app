@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -14,7 +16,7 @@ class RowItems extends StatelessWidget {
             Container(
               margin: const EdgeInsets.only(top: 10, bottom: 10, left: 10),
               padding: const EdgeInsets.symmetric(horizontal: 10),
-              height: 180,
+              height: 170,
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(10),
@@ -88,9 +90,9 @@ class RowItems extends StatelessWidget {
                                 CupertinoIcons.cart,
                                 color: Colors.white,
                               ),
-                            )
+                            ),
                           ],
-                        )
+                        ),
                       ],
                     ),
                   ),

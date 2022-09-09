@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {
@@ -27,9 +29,10 @@ class LoginPage extends StatelessWidget {
                   borderRadius: BorderRadius.circular(20),
                   boxShadow: [
                     BoxShadow(
-                        color: const Color(0xFF475269).withOpacity(0.5),
-                        blurRadius: 5,
-                        spreadRadius: 1),
+                      color: const Color(0xFF475269).withOpacity(0.5),
+                      blurRadius: 5,
+                      spreadRadius: 1,
+                    ),
                   ],
                 ),
                 child: Row(
@@ -85,7 +88,7 @@ class LoginPage extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(height: 20), //40
+              const SizedBox(height: 20),
               InkWell(
                 onTap: () {
                   Navigator.pushNamed(context, 'HomePage');

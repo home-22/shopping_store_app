@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:shopping_store_app/widget/Bottom_CartSheet.dart';
@@ -9,7 +11,7 @@ class HomeBottomNavBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 65,
+      height: 55,
       padding: const EdgeInsets.symmetric(horizontal: 20),
       decoration: const BoxDecoration(
         color: Colors.blue,
@@ -28,15 +30,18 @@ class HomeBottomNavBar extends StatelessWidget {
           ),
           InkWell(
             onTap: () {
-              showSlidingBottomSheet(context, builder: (context) {
-                return SlidingSheetDialog(
-                  elevation: 8,
-                  cornerRadius: 16,
-                  builder: (context, state) {
-                    return const BottomCartSheet();
-                  },
-                );
-              });
+              showSlidingBottomSheet(
+                context,
+                builder: (context) {
+                  return SlidingSheetDialog(
+                    elevation: 8,
+                    cornerRadius: 16,
+                    builder: (context, state) {
+                      return const BottomCartSheet();
+                    },
+                  );
+                },
+              );
             },
             child: const Icon(
               CupertinoIcons.cart_fill,
